@@ -35,7 +35,7 @@
  * @brief ID of the Kia Soul's OBD steering wheel angle CAN frame.
  *
  */
-#define KIA_SOUL_OBD_STEERING_WHEEL_ANGLE_CAN_ID ( 0x2B0 )
+#define KIA_SOUL_OBD_STEERING_WHEEL_ANGLE_CAN_ID ( 0xC6 ) //vesta steering id
 
 /*
  * @brief ID of the Kia Soul's OBD wheel speed CAN frame.
@@ -314,53 +314,53 @@ typedef struct
  * @brief Minimum allowable steering DAC output. [volts]
  *
  */
-#define STEERING_SPOOF_LOW_SIGNAL_VOLTAGE_MIN ( 0.80 )
+#define STEERING_SPOOF_LOW_SIGNAL_VOLTAGE_MIN ( 1.20 ) //vesta
 
 /*
  * @brief Maximum allowable steering DAC output. [volts]
  *
  */
-#define STEERING_SPOOF_LOW_SIGNAL_VOLTAGE_MAX ( 4.10 )
+#define STEERING_SPOOF_LOW_SIGNAL_VOLTAGE_MAX ( 3.8 ) //vesta
 
 /*
  * @brief Minimum allowable steering DAC output. [volts]
  *
  */
-#define STEERING_SPOOF_HIGH_SIGNAL_VOLTAGE_MIN ( 0.90 )
+#define STEERING_SPOOF_HIGH_SIGNAL_VOLTAGE_MIN ( 1.20 ) //vesta
 
 /*
  * @brief Maximum allowable steering DAC output. [volts]
  *
  */
-#define STEERING_SPOOF_HIGH_SIGNAL_VOLTAGE_MAX ( 4.20 )
+#define STEERING_SPOOF_HIGH_SIGNAL_VOLTAGE_MAX ( 3.80 ) //vesta
 
 /*
  * @brief Minimum allowed value for the low spoof signal value. [steps]
  *
  * Equal to \ref STEERING_SPOOF_LOW_SIGNAL_VOLTAGE_MIN * \ref STEPS_PER_VOLT.
  */
-#define STEERING_SPOOF_LOW_SIGNAL_RANGE_MIN ( 656 )
+#define STEERING_SPOOF_LOW_SIGNAL_RANGE_MIN ( 983 ) //vesta
 
 /*
  * @brief Minimum allowed value for the low spoof signal value. [steps]
  *
  * Equal to \ref STEERING_SPOOF_LOW_SIGNAL_VOLTAGE_MAX * \ref STEPS_PER_VOLT.
  */
-#define STEERING_SPOOF_LOW_SIGNAL_RANGE_MAX ( 3358 )
+#define STEERING_SPOOF_LOW_SIGNAL_RANGE_MAX ( 3113 ) //vesta
 
 /*
  * @brief Minimum allowed value for the low spoof signal value. [steps]
  *
  * Equal to \ref STEERING_SPOOF_HIGH_SIGNAL_VOLTAGE_MIN * \ref STEPS_PER_VOLT.
  */
-#define STEERING_SPOOF_HIGH_SIGNAL_RANGE_MIN ( 738 )
+#define STEERING_SPOOF_HIGH_SIGNAL_RANGE_MIN ( 983 ) //vesta
 
 /*
  * @brief Minimum allowed value for the low spoof signal value. [steps]
  *
  * Equal to \ref STEERING_SPOOF_HIGH_SIGNAL_VOLTAGE_MAX * \ref STEPS_PER_VOLT.
  */
-#define STEERING_SPOOF_HIGH_SIGNAL_RANGE_MAX ( 3440 )
+#define STEERING_SPOOF_HIGH_SIGNAL_RANGE_MAX ( 3113 ) //vesta
 
 /*
  * @brief Scalar value for the low spoof signal taken from a calibration curve.

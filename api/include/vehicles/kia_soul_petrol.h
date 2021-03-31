@@ -35,7 +35,7 @@
  * @brief ID of the Kia Soul's OBD steering wheel angle CAN frame.
  *
  */
-#define KIA_SOUL_OBD_STEERING_WHEEL_ANGLE_CAN_ID ( 0xC6 ) //vesta steering id
+#define KIA_SOUL_OBD_STEERING_WHEEL_ANGLE_CAN_ID ( 0x0C6 )
 
 /*
  * @brief ID of the Kia Soul's OBD wheel speed CAN frame.
@@ -47,7 +47,7 @@
  * @brief ID of the Kia Soul's OBD brake pressure CAN frame.
  *
  */
-#define KIA_SOUL_OBD_BRAKE_PRESSURE_CAN_ID ( 0x220 )
+#define KIA_SOUL_OBD_BRAKE_PRESSURE_CAN_ID ( 0x17E )
 
 /*
  * @brief Factor to scale OBD steering angle to degrees
@@ -302,89 +302,89 @@ typedef struct
  * @brief Minimum allowable torque value.
  *
  */
-#define MINIMUM_TORQUE_COMMAND ( -12.8 )
+#define MINIMUM_TORQUE_COMMAND ( -10 )
 
 /*
  * @brief Maximum allowable torque value.
  *
  */
-#define MAXIMUM_TORQUE_COMMAND ( 12.7 )
+#define MAXIMUM_TORQUE_COMMAND ( 10 )
 
 /*
  * @brief Minimum allowable steering DAC output. [volts]
  *
  */
-#define STEERING_SPOOF_LOW_SIGNAL_VOLTAGE_MIN ( 1.20 ) //vesta
+#define STEERING_SPOOF_LOW_SIGNAL_VOLTAGE_MIN ( 1.208 ) //vesta
 
 /*
  * @brief Maximum allowable steering DAC output. [volts]
  *
  */
-#define STEERING_SPOOF_LOW_SIGNAL_VOLTAGE_MAX ( 3.8 ) //vesta
+#define STEERING_SPOOF_LOW_SIGNAL_VOLTAGE_MAX ( 3.965 ) //vesta
 
 /*
  * @brief Minimum allowable steering DAC output. [volts]
  *
  */
-#define STEERING_SPOOF_HIGH_SIGNAL_VOLTAGE_MIN ( 1.20 ) //vesta
+#define STEERING_SPOOF_HIGH_SIGNAL_VOLTAGE_MIN ( 1.078 ) //vesta
 
 /*
  * @brief Maximum allowable steering DAC output. [volts]
  *
  */
-#define STEERING_SPOOF_HIGH_SIGNAL_VOLTAGE_MAX ( 3.80 ) //vesta
+#define STEERING_SPOOF_HIGH_SIGNAL_VOLTAGE_MAX ( 3.808 )
 
 /*
  * @brief Minimum allowed value for the low spoof signal value. [steps]
  *
  * Equal to \ref STEERING_SPOOF_LOW_SIGNAL_VOLTAGE_MIN * \ref STEPS_PER_VOLT.
  */
-#define STEERING_SPOOF_LOW_SIGNAL_RANGE_MIN ( 983 ) //vesta
+#define STEERING_SPOOF_LOW_SIGNAL_RANGE_MIN ( 990 )
 
 /*
  * @brief Minimum allowed value for the low spoof signal value. [steps]
  *
  * Equal to \ref STEERING_SPOOF_LOW_SIGNAL_VOLTAGE_MAX * \ref STEPS_PER_VOLT.
  */
-#define STEERING_SPOOF_LOW_SIGNAL_RANGE_MAX ( 3113 ) //vesta
+#define STEERING_SPOOF_LOW_SIGNAL_RANGE_MAX ( 3248 )
 
 /*
  * @brief Minimum allowed value for the low spoof signal value. [steps]
  *
  * Equal to \ref STEERING_SPOOF_HIGH_SIGNAL_VOLTAGE_MIN * \ref STEPS_PER_VOLT.
  */
-#define STEERING_SPOOF_HIGH_SIGNAL_RANGE_MIN ( 983 ) //vesta
+#define STEERING_SPOOF_HIGH_SIGNAL_RANGE_MIN ( 883 )
 
 /*
  * @brief Minimum allowed value for the low spoof signal value. [steps]
  *
  * Equal to \ref STEERING_SPOOF_HIGH_SIGNAL_VOLTAGE_MAX * \ref STEPS_PER_VOLT.
  */
-#define STEERING_SPOOF_HIGH_SIGNAL_RANGE_MAX ( 3113 ) //vesta
+#define STEERING_SPOOF_HIGH_SIGNAL_RANGE_MAX ( 3120 )
 
 /*
  * @brief Scalar value for the low spoof signal taken from a calibration curve.
  *
  */
-#define TORQUE_SPOOF_LOW_SIGNAL_CALIBRATION_CURVE_SCALE ( 0.135 )
+#define TORQUE_SPOOF_LOW_SIGNAL_CALIBRATION_CURVE_SCALE ( -0.136 ) //vesta
 
 /*
  * @brief Offset value for the low spoof signal taken from a calibration curve.
  *
  */
-#define TORQUE_SPOOF_LOW_SIGNAL_CALIBRATION_CURVE_OFFSET ( 2.39 )
+#define TORQUE_SPOOF_LOW_SIGNAL_CALIBRATION_CURVE_OFFSET ( 2.5 ) //vesta
 
 /*
  * @brief Scalar value for the high spoof signal taken from a calibration curve.
  *
  */
-#define TORQUE_SPOOF_HIGH_SIGNAL_CALIBRATION_CURVE_SCALE ( -0.145 )
+#define TORQUE_SPOOF_HIGH_SIGNAL_CALIBRATION_CURVE_SCALE ( 0.136 ) //vesta
 
 /*
  * @brief Offset value for the high spoof signal taken from a calibration curve.
  *
  */
-#define TORQUE_SPOOF_HIGH_SIGNAL_CALIBRATION_CURVE_OFFSET ( 2.42 )
+#define TORQUE_SPOOF_HIGH_SIGNAL_CALIBRATION_CURVE_OFFSET ( 2.5 ) //vesta
 
 /*
  * @brief Minimum allowed value for the high spoof signal value.
@@ -432,53 +432,53 @@ typedef struct
  * @brief Minimum allowed voltage for the low spoof signal voltage. [volts]
  *
  */
-#define THROTTLE_SPOOF_LOW_SIGNAL_VOLTAGE_MIN ( 0.30 )
+#define THROTTLE_SPOOF_LOW_SIGNAL_VOLTAGE_MIN ( 0.724 ) //vesta
 
 /*
  * @brief Maximum allowed voltage for the low spoof signal voltage. [volts]
  *
  */
-#define THROTTLE_SPOOF_LOW_SIGNAL_VOLTAGE_MAX ( 2.00 )
+#define THROTTLE_SPOOF_LOW_SIGNAL_VOLTAGE_MAX ( 4.53 ) //vesta
 
 /**
  * @brief Minimum allowed voltage for the high spoof signal voltage. [volts]
  *
  */
-#define THROTTLE_SPOOF_HIGH_SIGNAL_VOLTAGE_MIN ( 0.70 )
+#define THROTTLE_SPOOF_HIGH_SIGNAL_VOLTAGE_MIN ( 0.361 ) //vesta
 
 /**
  * @brief Maximum allowed voltage for the high spoof signal voltage. [volts]
  *
  */
-#define THROTTLE_SPOOF_HIGH_SIGNAL_VOLTAGE_MAX ( 4.10 )
+#define THROTTLE_SPOOF_HIGH_SIGNAL_VOLTAGE_MAX ( 2.267 ) //vesta
 
 /*
  * @brief Minimum allowed value for the low spoof signal value. [steps]
  *
  * Equal to \ref THROTTLE_SPOOF_LOW_SIGNAL_VOLTAGE_MIN * \ref STEPS_PER_VOLT.
  */
-#define THROTTLE_SPOOF_LOW_SIGNAL_RANGE_MIN ( 245 )
+#define THROTTLE_SPOOF_LOW_SIGNAL_RANGE_MIN ( 593 ) //vesta
 
 /*
  * @brief Minimum allowed value for the low spoof signal value. [steps]
  *
  * Equal to \ref THROTTLE_SPOOF_LOW_SIGNAL_VOLTAGE_MAX * \ref STEPS_PER_VOLT.
  */
-#define THROTTLE_SPOOF_LOW_SIGNAL_RANGE_MAX ( 1638 )
+#define THROTTLE_SPOOF_LOW_SIGNAL_RANGE_MAX ( 3711 ) //vesta
 
 /*
  * @brief Minimum allowed value for the low spoof signal value. [steps]
  *
  * Equal to \ref THROTTLE_SPOOF_HIGH_SIGNAL_VOLTAGE_MIN * \ref STEPS_PER_VOLT.
  */
-#define THROTTLE_SPOOF_HIGH_SIGNAL_RANGE_MIN ( 573 )
+#define THROTTLE_SPOOF_HIGH_SIGNAL_RANGE_MIN ( 296 ) //vesta
 
 /*
  * @brief Minimum allowed value for the low spoof signal value. [steps]
  *
  * Equal to \ref THROTTLE_SPOOF_HIGH_SIGNAL_VOLTAGE_MAX * \ref STEPS_PER_VOLT.
  */
-#define THROTTLE_SPOOF_HIGH_SIGNAL_RANGE_MAX ( 3358 )
+#define THROTTLE_SPOOF_HIGH_SIGNAL_RANGE_MAX ( 1857 ) //vesta
 
 /*
  * @brief Calculation to convert a throttle position to a low spoof voltage.
